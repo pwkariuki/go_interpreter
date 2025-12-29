@@ -12,5 +12,6 @@ build: vet
 
 test: vet
 	go test ./...
+
 clean:
 	go clean

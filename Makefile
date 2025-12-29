@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := build
 
-.PHONY:fmt vet build clean
+.PHONY:fmt vet build clean test
 fmt:
 	go fmt ./...
 
@@ -10,5 +10,7 @@ vet: fmt
 build: vet
 	go build
 
+test: vet
+	go test ./...
 clean:
 	go clean
